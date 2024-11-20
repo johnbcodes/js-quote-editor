@@ -1,0 +1,21 @@
+node_modules
+TODO.txt
+
+# Output
+/.svelte-kit
+/.wrangler
+/build
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Supabase
+supabase/.branches
+supabase/.temp
