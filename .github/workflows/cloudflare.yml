@@ -3,7 +3,7 @@ name: 🚀 Deploy to Cloudflare
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
   workflow_dispatch:
 
 jobs:

@@ -3,7 +3,7 @@ name: 🚀 Deploy to Supabase
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
   workflow_dispatch:
 
 jobs:
