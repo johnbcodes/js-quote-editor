@@ -19,3 +19,6 @@ vite.config.ts.timestamp-*
 # Supabase
 supabase/.branches
 supabase/.temp
+
+# Cloudflare
+wrangler.toml
