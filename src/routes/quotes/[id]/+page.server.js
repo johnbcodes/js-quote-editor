@@ -84,9 +84,7 @@ export const actions = {
 				unitPrice: form.data.unitPrice
 			});
 		} else {
-			const errors = transformErrors(form.error.errors);
-			console.log('\n' + JSON.stringify(errors));
-			return fail(422, { error: true, errors: errors });
+			return fail(422, { error: true, errors: transformErrors(form.error.errors) });
 		}
 	},
 

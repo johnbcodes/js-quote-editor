@@ -14,7 +14,6 @@ export const actions = {
 	create: async ({ locals: { db }, request }) => {
 		const formData = Object.fromEntries(await request.formData());
 		const form = schema.safeParse(formData);
-		console.log('\n' + JSON.stringify(form));
 
 		if (form.success) {
 			await db.insert(quotes).values({ name: form.data.name });
