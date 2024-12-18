@@ -6,7 +6,10 @@ import { eq } from 'drizzle-orm/expressions';
 import { fail } from '@sveltejs/kit';
 
 export async function load({ locals: { db } }) {
+	const t0 = performance.now();
 	const quotes = await db.query.quotes.findMany();
+	const t1 = performance.now();
+	console.log(`Quotes List took ${t1 - t0} milliseconds.`);
 	return { quotes };
 }
 

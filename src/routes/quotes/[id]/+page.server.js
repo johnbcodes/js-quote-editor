@@ -14,6 +14,7 @@ import { fail } from '@sveltejs/kit';
 
 export async function load({ params, locals: { db } }) {
 	// Possible to do in one query in pure SQL, but doesn't seem to be currently possible with Drizzle Query or Select APIs
+	const t0 = performance.now();
 	const quote = await db.query.quotes.findFirst({
 		where: eq(quotes.id, params.id),
 		with: {
@@ -24,11 +25,15 @@ export async function load({ params, locals: { db } }) {
 			}
 		}
 	});
+	const t1 = performance.now();
+	console.log(`Quote Dates+Items took ${t1 - t0} milliseconds.`);
 	const sum = await db
 		.select({ value: sql`coalesce(sum(${lineItems.unitPrice}), 0)`.mapWith(lineItems.unitPrice) })
 		.from(lineItems)
 		.innerJoin(lineItemDates, eq(lineItems.lineItemDateId, lineItemDates.id))
 		.where(eq(lineItemDates.quoteId, params.id));
+	const t2 = performance.now();
+	console.log(`Quote total took ${t2 - t1} milliseconds.`);
 	const total = sum[0].value;
 
 	return { quote, total };
