@@ -1,8 +1,7 @@
 import { schema } from './schema.js';
 import { quotes, lineItemDates, lineItems } from '$lib/server/db/schema.js';
 import { transformErrors } from '$lib/errors.js';
-import { inArray } from 'drizzle-orm';
-import { eq } from 'drizzle-orm/expressions';
+import { eq, inArray } from 'drizzle-orm';
 import { fail } from '@sveltejs/kit';
 
 export async function load({ locals: { db } }) {
