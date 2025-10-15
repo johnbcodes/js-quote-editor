@@ -74,7 +74,7 @@
 		use:enhance={submitUpdate}
 	>
 		{#if form?.error}
-			<div class="w-full rounded-md bg-primary-bg p-2 text-primary">
+			<div class="bg-primary-bg text-primary w-full rounded-md p-2">
 				{#each form.errors.all as error}
 					<p>{error}</p>
 				{/each}

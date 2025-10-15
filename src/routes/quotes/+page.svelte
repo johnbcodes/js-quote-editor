@@ -21,8 +21,8 @@
 </script>
 
 <main id="container" class="mx-auto my-0 w-full max-w-[60rem] px-4 py-0">
-	<div id="header" class="mb-8 mt-4 flex flex-wrap justify-between gap-3">
-		<h1 class="m-0 box-border p-0 text-[2rem]/[1.1] font-bold text-header">Quotes</h1>
+	<div id="header" class="mt-4 mb-8 flex flex-wrap justify-between gap-3">
+		<h1 class="text-header m-0 box-border p-0 text-[2rem]/[1.1] font-bold">Quotes</h1>
 		<button
 			type="button"
 			class="button button-prime"
@@ -45,7 +45,7 @@
 				use:enhance={submitCreate}
 			>
 				{#if form?.error}
-					<div class="w-full rounded-md bg-primary-bg p-2 text-primary">
+					<div class="bg-primary-bg text-primary w-full rounded-md p-2">
 						{#each form.errors.all as error}
 							<p>{error}</p>
 						{/each}
@@ -80,7 +80,7 @@
 				id="quotes_empty"
 				class="hidden border-2 border-dashed border-[hsl(0,6%,93%)] p-4 text-center only:[display:revert]"
 			>
-				<p class="mb-6 font-bold text-header [font-size:1.125rem]">
+				<p class="text-header mb-6 [font-size:1.125rem] font-bold">
 					You don't have any quotes yet!
 				</p>
 				<button

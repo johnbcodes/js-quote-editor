@@ -27,8 +27,8 @@
 
 <main id="container" class="mx-auto my-0 mb-16 w-full max-w-[60rem] px-4 py-0">
 	<a href="/quotes">← Back to quotes</a>
-	<div class="mb-8 mt-4 flex flex-wrap justify-between gap-3">
-		<h1 class="m-0 p-0 text-[2rem]/[1.1] font-bold text-header">
+	<div class="mt-4 mb-8 flex flex-wrap justify-between gap-3">
+		<h1 class="text-header m-0 p-0 text-[2rem]/[1.1] font-bold">
 			{data.quote.name}
 		</h1>
 		<button
@@ -46,14 +46,14 @@
 			<form
 				method="POST"
 				action="?/createDate"
-				class="mb-1.5 mt-8 flex flex-wrap items-center justify-between gap-2"
+				class="mt-8 mb-1.5 flex flex-wrap items-center justify-between gap-2"
 				autocomplete="off"
 				novalidate
 				accept-charset="UTF-8"
 				use:enhance={submitCreate}
 			>
 				{#if form?.error}
-					<div class="w-full rounded-md bg-primary-bg p-2 text-primary">
+					<div class="bg-primary-bg text-primary w-full rounded-md p-2">
 						{#each form.errors.all as error}
 							<p>{error}</p>
 						{/each}

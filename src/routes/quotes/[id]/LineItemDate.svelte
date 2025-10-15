@@ -45,7 +45,7 @@
 	}
 </script>
 
-<div class="mb-1.5 mt-8">
+<div class="mt-8 mb-1.5">
 	{#if !editingDate}
 		<div class="flex items-center justify-between gap-2">
 			<h2 class="text-[1.5rem] font-bold">
@@ -75,14 +75,14 @@
 		<form
 			method="POST"
 			action="?/updateDate"
-			class="mb-1.5 mt-8 flex flex-wrap items-center justify-between gap-2"
+			class="mt-8 mb-1.5 flex flex-wrap items-center justify-between gap-2"
 			autocomplete="off"
 			novalidate
 			accept-charset="UTF-8"
 			use:enhance={submitUpdate}
 		>
 			{#if form?.error}
-				<div class="w-full rounded-md bg-primary-bg p-2 text-primary">
+				<div class="bg-primary-bg text-primary w-full rounded-md p-2">
 					{#each form.errors.all as error}
 						<p>{error}</p>
 					{/each}
@@ -111,20 +111,20 @@
 	{/if}
 
 	<div class="mt-2 rounded-md bg-white p-4 shadow-[1px_3px_6px_hsl(0,0%,0%,0.1)]">
-		<div class="mb-3 flex flex-wrap items-start gap-2 rounded-md bg-light p-2">
-			<div class="flex-1 text-[0.875rem] font-bold uppercase tracking-[1px]">Article</div>
+		<div class="bg-light mb-3 flex flex-wrap items-start gap-2 rounded-md p-2">
+			<div class="flex-1 text-[0.875rem] font-bold tracking-[1px] uppercase">Article</div>
 			<div
-				class="display-[revert] flex-[0_0_7rem] text-[0.875rem] font-bold uppercase tracking-[1px]"
+				class="display-[revert] flex-[0_0_7rem] text-[0.875rem] font-bold tracking-[1px] uppercase"
 			>
 				Quantity
 			</div>
 			<div
-				class="display-[revert] flex-[0_0_9rem] text-[0.875rem] font-bold uppercase tracking-[1px]"
+				class="display-[revert] flex-[0_0_9rem] text-[0.875rem] font-bold tracking-[1px] uppercase"
 			>
 				Price
 			</div>
 			<div
-				class="order-[revert] flex flex-[0_0_10rem] gap-2 text-[0.875rem] font-bold uppercase tracking-[1px]"
+				class="order-[revert] flex flex-[0_0_10rem] gap-2 text-[0.875rem] font-bold tracking-[1px] uppercase"
 			></div>
 		</div>
 
@@ -143,7 +143,7 @@
 				use:enhance={submitCreate}
 			>
 				{#if form?.error}
-					<div class="w-full rounded-md bg-primary-bg p-2 text-primary">
+					<div class="bg-primary-bg text-primary w-full rounded-md p-2">
 						{#each form.errors.all as error}
 							<p>{error}</p>
 						{/each}

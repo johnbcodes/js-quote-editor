@@ -1,5 +1,5 @@
 @import 'tailwindcss' source(none);
-@source "../src/**/*.{html,js,svelte,ts}";
+@source '../src/**/*.{html,js,svelte,ts}';
 
 @theme {
 	--color-header: hsl(0, 1%, 16%);
@@ -19,29 +19,31 @@
 	--animate-appear-then-fade: appear-then-fade 4s both;
 
 	@keyframes appear-then-fade {
-		0%, 100% {
+		0%,
+		100% {
 			opacity: 0;
 		}
-		5%, 60% {
+		5%,
+		60% {
 			opacity: 1;
 		}
 	}
 }
 
 @layer base {
-    a {
-        @apply text-primary no-underline [transition:color_200ms];
-    }
+	a {
+		@apply text-primary no-underline [transition:color_200ms];
+	}
 
-    a:hover,
-    a:focus,
-    a:active {
-        @apply text-primary-rotate;
-    }
+	a:hover,
+	a:focus,
+	a:active {
+		@apply text-primary-rotate;
+	}
 }
 
 .button {
-	@apply font-bold inline-block px-4 py-1.5 rounded-md bg-header bg-origin-border border-2 border-transparent border-solid no-underline cursor-pointer outline-none [transition:filter_400ms,color_200ms];
+	@apply bg-header inline-block cursor-pointer rounded-md border-2 border-solid border-transparent bg-origin-border px-4 py-1.5 font-bold no-underline outline-none [transition:filter_400ms,color_200ms];
 }
 
 .button:hover,
@@ -52,25 +54,25 @@
 }
 
 .button-prime {
-	@apply text-white bg-gradient-to-r from-primary to-primary-rotate;
+	@apply from-primary to-primary-rotate bg-gradient-to-r text-white;
 }
 
 .button-prime:hover,
 .button-prime:focus,
 .button-prime:focus-within,
 .button-prime:active {
-	@apply text-white saturate-[1.4] brightness-[1.15];
+	@apply text-white brightness-[1.15] saturate-[1.4];
 }
 
 .button-secondary {
-	@apply text-white bg-gradient-to-r from-secondary to-secondary-rotate;
+	@apply from-secondary to-secondary-rotate bg-gradient-to-r text-white;
 }
 
 .button-secondary:hover,
 .button-secondary:focus,
 .button-secondary:focus-within,
 .button-secondary:active {
-	@apply text-white saturate-[1.2] brightness-110;
+	@apply text-white brightness-110 saturate-[1.2];
 }
 
 .button-light {
@@ -85,7 +87,7 @@
 }
 
 .button-dark {
-	@apply text-white bg-dark border-dark;
+	@apply bg-dark border-dark text-white;
 }
 
 .button-dark:hover,
@@ -108,7 +110,7 @@
 }
 
 .form-input {
-	@apply block w-full max-w-full px-2 py-1.5 rounded-md border-solid border-2 border-[hsl(0,6%,93%)] [outline:none] [transition:box-shadow_200ms] focus:shadow-[0_0_0_2px_hsl(210,100%,82%)];
+	@apply block w-full max-w-full rounded-md border-2 border-solid border-[hsl(0,6%,93%)] px-2 py-1.5 [outline:none] [transition:box-shadow_200ms] focus:shadow-[0_0_0_2px_hsl(210,100%,82%)];
 }
 
 input.error,
