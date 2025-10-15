@@ -83,7 +83,7 @@
 		>
 			{#if form?.error}
 				<div class="bg-primary-bg text-primary w-full rounded-md p-2">
-					{#each form.errors.all as error}
+					{#each form.errors.all as error (error.id)}
 						<p>{error}</p>
 					{/each}
 				</div>
@@ -144,7 +144,7 @@
 			>
 				{#if form?.error}
 					<div class="bg-primary-bg text-primary w-full rounded-md p-2">
-						{#each form.errors.all as error}
+						{#each form.errors.all as error (error.id)}
 							<p>{error}</p>
 						{/each}
 					</div>
