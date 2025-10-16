@@ -8,6 +8,7 @@ The main motivation is learning to develop web applications with JavaScript alon
 
 - [Svelte 5 and SvelteKit](https://svelte.dev/)
 - [PostgreSQL](https://www.postgresql.org/)
+- [Goose Migrations](https://pressly.github.io/goose/)
 - [drizzle](https://orm.drizzle.team/)
 - [zod](https://zod.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
