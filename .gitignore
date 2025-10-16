@@ -3,7 +3,6 @@ TODO.txt
 
 # Output
 /.svelte-kit
-/.wrangler
 /build
 
 # Env
@@ -15,10 +14,3 @@ TODO.txt
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-
-# Supabase
-supabase/.branches
-supabase/.temp
-
-# Cloudflare
-wrangler.toml

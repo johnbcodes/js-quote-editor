@@ -7,13 +7,13 @@
 The main motivation is learning to develop web applications with JavaScript alone. It includes the following stack:
 
 - [Svelte 5 and SvelteKit](https://svelte.dev/)
-- [Supabase](https://supabase.com/) ..just Postgres for now
+- [PostgreSQL](https://www.postgresql.org/)
 - [drizzle](https://orm.drizzle.team/)
 - [zod](https://zod.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [vite](https://vite.dev/)
 
-Some features of the tutorial are currently left out will be worked on in the future:
+Some features of the tutorial are currently left out:
 
 - Broadcasting with WebSockets (Chapter 5)
 - Security (Chapter 6)
