@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: KsnVsqDpzT4NFah7tvkPFUJH3
+      POSTGRES_USER: quotes
+    ports:
+      - 5432:5432
+    volumes:
+      - quotes-postgres-volume:/var/lib/postgresql
+
+volumes:
+  quotes-postgres-volume:
