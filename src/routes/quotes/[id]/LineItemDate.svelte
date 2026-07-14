@@ -191,8 +191,7 @@
 					<textarea
 						name="description"
 						class="form-input resize-none"
-						placeholder="Description (optional)"
-					></textarea>
+						placeholder="Description (optional)"></textarea>
 				</div>
 				<button
 					class="button button-light"
