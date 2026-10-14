@@ -1,4 +1,4 @@
-import { db } from '$lib/server/db';
+import { db } from '#lib/server/db/index.js';
 
 export async function handle({ event, resolve }) {
 	event.locals.db = db;
