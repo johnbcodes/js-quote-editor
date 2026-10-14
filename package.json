@@ -7,8 +7,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint .",
-		"deploy": "npm run build && wrangler pages deploy"
+		"lint": "prettier --check . && eslint ."
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2.0.2",
