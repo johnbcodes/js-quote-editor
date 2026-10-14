@@ -1,8 +1,8 @@
 <script>
 	import toast from 'svelte-hot-french-toast';
 	import { enhance } from '$app/forms';
-	import { page } from '$app/stores';
-	import { isInvalid } from '$lib/errors.js';
+	import { page } from '$app/state';
+	import { isInvalid } from '#lib/errors.js';
 	import Quote from './Quote.svelte';
 
 	let { data, form } = $props();
@@ -12,7 +12,7 @@
 	async function submitCreate() {
 		return async ({ update }) => {
 			await update();
-			if ($page.status === 204) {
+			if (page.status === 204) {
 				creating = false;
 				toast.success('Quote was successfully created.');
 			}

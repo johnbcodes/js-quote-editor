@@ -1,8 +1,8 @@
 <script>
 	import toast from 'svelte-hot-french-toast';
 	import { enhance } from '$app/forms';
-	import { page } from '$app/stores';
-	import { isInvalid } from '$lib/errors.js';
+	import { page } from '$app/state';
+	import { isInvalid } from '#lib/errors.js';
 
 	let { quote, form } = $props();
 
@@ -11,7 +11,7 @@
 	async function submitUpdate() {
 		return async ({ update }) => {
 			await update();
-			if ($page.status === 204) {
+			if (page.status === 204) {
 				editing = false;
 				toast.success('Quote was successfully updated.');
 			}
@@ -21,7 +21,7 @@
 	async function submitDelete() {
 		return async ({ update }) => {
 			await update();
-			if ($page.status === 204) {
+			if (page.status === 204) {
 				editing = false;
 				toast.success('Quote was successfully deleted.');
 			}

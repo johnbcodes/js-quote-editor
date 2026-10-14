@@ -1,8 +1,8 @@
 <script>
 	import toast from 'svelte-hot-french-toast';
 	import { enhance } from '$app/forms';
-	import { page } from '$app/stores';
-	import { isInvalid } from '$lib/errors.js';
+	import { page } from '$app/state';
+	import { isInvalid } from '#lib/errors.js';
 	import LineItem from './LineItem.svelte';
 
 	let { lineItemDate, form } = $props();
@@ -13,7 +13,7 @@
 	async function submitUpdate() {
 		return async ({ update }) => {
 			await update();
-			if ($page.status === 204) {
+			if (page.status === 204) {
 				editingDate = false;
 				toast.success('Date was successfully updated.');
 			}
@@ -24,7 +24,7 @@
 		if (confirm('Are you sure?')) {
 			return async ({ update }) => {
 				await update();
-				if ($page.status === 204) {
+				if (page.status === 204) {
 					editingDate = false;
 					toast.success('Date was successfully deleted.');
 				}
@@ -37,7 +37,7 @@
 	async function submitCreate() {
 		return async ({ update }) => {
 			await update();
-			if ($page.status === 204) {
+			if (page.status === 204) {
 				creatingItem = false;
 				toast.success('Item was successfully created.');
 			}
@@ -113,6 +113,7 @@
 	<div class="mt-2 rounded-md bg-white p-4 shadow-[1px_3px_6px_hsl(0,0%,0%,0.1)]">
 		<div class="bg-light mb-3 flex flex-wrap items-start gap-2 rounded-md p-2">
 			<div class="flex-1 text-[0.875rem] font-bold tracking-[1px] uppercase">Article</div>
+
 			<div
 				class="display-[revert] flex-[0_0_7rem] text-[0.875rem] font-bold tracking-[1px] uppercase"
 			>
